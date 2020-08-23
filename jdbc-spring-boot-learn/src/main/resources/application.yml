@@ -1,0 +1,9 @@
+server:
+  port: 8901
+
+spring:
+  datasource:
+    username: root
+    password: rootpwd123
+    url: jdbc:mysql://120.77.95.119:3306/mysql?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
