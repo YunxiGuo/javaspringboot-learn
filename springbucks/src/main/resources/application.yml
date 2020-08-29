@@ -10,6 +10,6 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
+      # create-drop:应用运行时根据实体创建表格,结束时删除掉对应的表格
       ddl-auto: create-drop
     show-sql: true
-
