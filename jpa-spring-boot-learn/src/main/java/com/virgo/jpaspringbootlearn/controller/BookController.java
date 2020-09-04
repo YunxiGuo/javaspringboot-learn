@@ -21,8 +21,8 @@ public class BookController {
     private BookRepository bookRepository;
 
     @GetMapping("/{id}")
-    public Optional<Book> getBook(@PathVariable Long id){
-        var book = bookRepository.findById(id);
+    public Book getBook(@PathVariable Long id){
+        var book = bookRepository.getOne(id);
         return book;
     }
 }

@@ -3,8 +3,10 @@ package com.virgo.springbucks.entity;
 import javax.persistence.*;
 
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,10 +16,12 @@ import java.util.Date;
  * @date 2020/8/29 11:14
  */
 @MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 @Data
 public class BaseEntity implements Serializable {
     @Id  //设置主键
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  //设置为自增策略
+    @GenericGenerator(name = "IdentityIdGenerator",strategy = "identity")
+    @GeneratedValue(generator = "IdentityIdGenerator")
     private Long id;
 
     @CreatedDate()

@@ -1,14 +1,12 @@
 package com.virgo.springbucks.service;
 
 import com.virgo.springbucks.entity.Coffee;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  *
  */
-@Service
 public interface CoffeeService {
     /**
      * 获取咖啡列表
@@ -16,11 +14,11 @@ public interface CoffeeService {
      */
     public List<Coffee> getAll();
 
-    public Coffee getCoffeeById(Long id);
+    public Coffee getCoffeeById(Long id) throws Exception;
 
     public Coffee getCoffeeByName(String name);
 
-    public Coffee insertCoffee(String name);
+    public Coffee insertCoffee(String name,Double price);
 
     public boolean deleteCoffee(Long id);
 }

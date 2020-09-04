@@ -1,6 +1,7 @@
 package com.virgo.springbucks.entity;
 
 import com.virgo.springbucks.entity.enums.EnumOrderState;
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@ApiModel(value = "Order",description = "订单信息")
 public class Order extends BaseEntity{
 
     /**
@@ -34,5 +36,6 @@ public class Order extends BaseEntity{
      * 订单的状态
      */
     @Column(nullable = false)
+    @Enumerated
     private EnumOrderState state;
 }

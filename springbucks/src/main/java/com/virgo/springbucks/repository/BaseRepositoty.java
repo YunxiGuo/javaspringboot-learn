@@ -10,5 +10,5 @@ import java.util.List;
  * @date 2020/8/29 14:29
  */
 @NoRepositoryBean  //标识这不是一个bean
-public interface BaseRepositoty<T,Long> extends PagingAndSortingRepository {
+public interface BaseRepositoty<T> extends PagingAndSortingRepository<T,Long> {
 }

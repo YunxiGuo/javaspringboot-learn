@@ -1,5 +1,6 @@
 package com.virgo.springbucks.entity;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,6 +10,7 @@ import org.joda.money.Money;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * @author GUOYUNXI
@@ -20,7 +22,9 @@ import javax.persistence.Table;
 @Table(name = "t_coffee")
 @NoArgsConstructor
 @AllArgsConstructor
-public class Coffee extends BaseEntity{
+@ApiModel(value = "coffee",description = "coffee信息")
+public class Coffee extends BaseEntity {
+    @Column
     private String name;
     @Column
     @Type(type = "org.jadira.usertype.moneyandcurrency.joda.PersistentMoneyAmount",

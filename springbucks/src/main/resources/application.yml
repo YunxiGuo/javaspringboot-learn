@@ -1,15 +1,14 @@
 server:
   port: 8903
-
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/taco_cloud?useSSL=false
+    url: jdbc:postgresql://localhost:5432/springbucks?useSSL=false
     username: postgres
     password: unitech
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      # create-drop:应用运行时根据实体创建表格,结束时删除掉对应的表格
+      # create-drop:绋嬪簭姣忔杩愯鏃堕兘浼氭牴鎹疄浣撳垱寤鸿〃,绋嬪簭鍋滄杩愯鍚庝細鍒犻櫎瀵瑰簲鐨勮〃
       ddl-auto: create-drop
     show-sql: true
