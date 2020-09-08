@@ -41,6 +41,7 @@
         <module>jdbc-spring-boot-learn</module>
         <module>jpa-spring-boot-learn</module>
         <module>druid-spring-boot-learn</module>
+        <module>springbucks-customer</module>
     </modules>
 
     <build>

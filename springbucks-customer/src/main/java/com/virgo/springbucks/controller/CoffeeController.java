@@ -5,10 +5,7 @@ import com.virgo.springbucks.entity.Coffee;
 import com.virgo.springbucks.service.CoffeeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.joda.money.CurrencyUnit;
-import org.joda.money.Money;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +33,13 @@ public class CoffeeController {
         Coffee coffee = coffeeService.getCoffeeById(id);
         log.info("Coffee {}",coffee);
         return coffee;
+    }
+
+    @DeleteMapping(path = "/{id}")
+    @ApiOperation(value = "删除coffee")
+    public Boolean deleteCoffee(@PathVariable Long id){
+        coffeeService.deleteCoffee(id);
+        return true;
     }
 
 //    @GetMapping(path = "/test/{id}")

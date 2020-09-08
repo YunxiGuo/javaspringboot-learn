@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.virgo</groupId>
-    <artifactId>springbucks</artifactId>
+    <artifactId>springbucks-customer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springbucks</name>
-    <description>springboot实战项目--线上咖啡馆</description>
+    <name>springbucks-customer</name>
+    <description>springboot实战项目--线上咖啡馆之客户服务</description>
 
     <properties>
         <java.version>14</java.version>

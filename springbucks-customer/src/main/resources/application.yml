@@ -10,5 +10,5 @@ spring:
     #database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       # create-drop:程序每次运行时都会根据实体创建表,程序停止运行后会删除对应的表
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: true

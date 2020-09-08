@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @date 2020/8/29 14:34
  */
 public interface CoffeeRepository extends BaseRepositoty<Coffee> {
+
 }

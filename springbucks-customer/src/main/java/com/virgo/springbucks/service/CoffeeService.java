@@ -20,5 +20,5 @@ public interface CoffeeService {
 
     public Coffee insertCoffee(String name,Double price);
 
-    public boolean deleteCoffee(Long id);
+    public void deleteCoffee(Long id);
 }

@@ -48,7 +48,7 @@ public class CoffeeServiceImp implements CoffeeService {
     }
 
     @Override
-    public boolean deleteCoffee(Long id) {
-        return false;
+    public void deleteCoffee(Long id) {
+        coffeeRepository.deleteById(id);
     }
 }
